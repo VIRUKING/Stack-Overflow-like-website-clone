@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Overflow Question Search</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stack Overflow Question Search</h1>
+        
+        <!--  Login and Register -->
+        <div class="nav-buttons">
+            <button id="loginButton">Login</button>
+            <button id="registerButton">Register</button>
+        </div>
+
+       
+        <div id="loginForm" class="form" style="display:none;">
+            <h2>Login</h2>
+          
+            <form id="login" method="POST" action="http://localhost:3000/login">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            
+            <button id="closeLogin">Close</button>
+        </div>
+
+        <div id="registerForm" class="form" style="display:none;">
+            <h2>Register</h2>
+           
+
+            <form id="register" method="POST" action="http://localhost:3000/register">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            
+            <button id="closeRegister">Close</button>
+        </div>
+
+       
+        
+
+      <!-- sherch karva mate -->
+        <input type="text" id="search" placeholder="Search for questions...">
+        <br>
+        <select id="filter">
+            <option value="creation_date">Date</option>
+            <option value="score">Score</option>
+            <option value="view_count">Number of Comments</option>
+        </select>
+        <br><br>
+        <button id="searchButton">Search</button>
+        <br><br>
+        <!-- Language Selection  panding -->
+        <label for="language">Select Language:</label>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+           
+        </select>
+        
+        <div id="results"></div>
+    </div>
+    
+    <script src="/script.js"></script>
+   
+</body>
+</html>
+
